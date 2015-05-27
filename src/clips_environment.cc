@@ -430,7 +430,7 @@ Handle<Value> DataObjectToJSON(DATA_OBJECT& obj) {
     free(ostr);
     return result;
   } else if (type == FLOAT || type == INTEGER) {
-    return Number::New(ValueToDouble(value)));
+    return Number::New(ValueToDouble(value));
   }
   return Undefined();
 }
