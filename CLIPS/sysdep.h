@@ -108,6 +108,10 @@
    LOCALE __int64 _RTLENTRY _EXPFUNC  llabs(__int64 val);
 #endif
 
+#if defined(_MSC_VER)
+#define strtoll _strtoi64
+#endif
+
 #endif
 
 
