@@ -103,10 +103,10 @@
    LOCALE void                        SetJmpBuffer(void *,jmp_buf *);
    LOCALE void                        genprintfile(void *,FILE *,char *);
    
-#if WIN_BTC
+//#if WIN_BTC
    LOCALE __int64 _RTLENTRY _EXPFUNC  strtoll(const char *,char **,int);
    LOCALE __int64 _RTLENTRY _EXPFUNC  llabs(__int64 val);
-#endif
+//#endif
 
 #endif
 
