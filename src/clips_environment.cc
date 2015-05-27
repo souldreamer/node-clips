@@ -404,8 +404,10 @@ Handle<Value> MultiFieldToJSON(void* multifield_ptr, long begin, long end) {
       sprintf(ostr,"'%s'", str);
       array->Set(index-1, String::New(ostr));
       free(ostr);
-    } else if (field_type == FLOAT || field_type == INTEGER) {
+    } else if (field_type == FLOAT) {
       array->Set(index-1, Number::New(ValueToDouble(GetMFValue(multifield_ptr, index))));
+    } else if (field_type == INTEGER) {
+      array->Set(index-1, Number::New((int) ValueToLong(GetMFValue(multifield_ptr, index))));
     }
   }
   return array;
@@ -429,8 +431,10 @@ Handle<Value> DataObjectToJSON(DATA_OBJECT& obj) {
     Handle<Value> result = String::New(ostr);
     free(ostr);
     return result;
-  } else if (type == FLOAT || type == INTEGER) {
+  } else if (type == FLOAT) {
     return Number::New(ValueToDouble(value));
+  } else if (type == INTEGER) {
+    return Number::New((int) ValueToLong(value));
   }
   return Undefined();
 }
