@@ -32,7 +32,11 @@
 #ifdef _DFFNXPSR_SOURCE_
 #define LOCALE
 #else
+#ifdef __cplusplus
 #define LOCALE extern "C"
+#else
+#define LOCALE extern
+#endif
 #endif
 
 LOCALE intBool ParseDeffunction(void *,char *);

@@ -40,7 +40,11 @@
 #ifdef _GENRCEXE_SOURCE_
 #define LOCALE
 #else
+#ifdef __cplusplus
 #define LOCALE extern "C"
+#else
+#define LOCALE extern
+#endif
 #endif
 
 LOCALE void GenericDispatch(void *,DEFGENERIC *,DEFMETHOD *,DEFMETHOD *,EXPRESSION *,DATA_OBJECT *);

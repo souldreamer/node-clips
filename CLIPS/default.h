@@ -40,7 +40,11 @@
 #ifdef _DEFAULT_SOURCE_
 #define LOCALE
 #else
+#ifdef __cplusplus
 #define LOCALE extern "C"
+#else
+#define LOCALE extern
+#endif
 #endif
 
    LOCALE void                           DeriveDefaultFromConstraints(void *,CONSTRAINT_RECORD *,DATA_OBJECT *,int,int);

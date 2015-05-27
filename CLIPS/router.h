@@ -83,7 +83,11 @@ struct routerData
 #ifdef _ROUTER_SOURCE_
 #define LOCALE
 #else
+#ifdef __cplusplus
 #define LOCALE extern "C"
+#else
+#define LOCALE extern
+#endif
 #endif
 
 #define ExitRouter(a) EnvExitRouter(GetCurrentEnvironment(),a)

@@ -36,7 +36,11 @@
 #ifdef _FACTQPSR_SOURCE_
 #define LOCALE
 #else
+#ifdef __cplusplus
 #define LOCALE extern "C"
+#else
+#define LOCALE extern
+#endif
 #endif
 
 LOCALE EXPRESSION *FactParseQueryNoAction(void *,EXPRESSION *,char *);

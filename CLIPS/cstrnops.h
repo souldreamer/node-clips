@@ -39,7 +39,11 @@
 #ifdef _CSTRNOPS_SOURCE_
 #define LOCALE
 #else
+#ifdef __cplusplus
 #define LOCALE extern "C"
+#else
+#define LOCALE extern
+#endif
 #endif
 
    LOCALE struct constraintRecord       *IntersectConstraints(void *,struct constraintRecord *,struct constraintRecord *);

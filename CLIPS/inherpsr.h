@@ -34,7 +34,11 @@
 #ifdef _INHERPSR_SOURCE_
 #define LOCALE
 #else
+#ifdef __cplusplus
 #define LOCALE extern "C"
+#else
+#define LOCALE extern
+#endif
 #endif
 
 LOCALE PACKED_CLASS_LINKS *ParseSuperclasses(void *,char *,SYMBOL_HN *);

@@ -42,7 +42,11 @@
 #ifdef _RULELHS_SOURCE_
 #define LOCALE
 #else
+#ifdef __cplusplus
 #define LOCALE extern "C"
+#else
+#define LOCALE extern
+#endif
 #endif
 
 LOCALE struct lhsParseNode           *ParseRuleLHS(void *,char *,struct token *,char *,int *);

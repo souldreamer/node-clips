@@ -44,7 +44,11 @@ typedef struct tempSlotLink
 #ifdef _CLSLTPSR_SOURCE_
 #define LOCALE
 #else
+#ifdef __cplusplus
 #define LOCALE extern "C"
+#else
+#define LOCALE extern
+#endif
 #endif
 
 LOCALE TEMP_SLOT_LINK *ParseSlot(void *,char *,TEMP_SLOT_LINK *,PACKED_CLASS_LINKS *,int,int);

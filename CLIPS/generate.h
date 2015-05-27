@@ -38,7 +38,11 @@
 #ifdef _GENERATE_SOURCE_
 #define LOCALE
 #else
+#ifdef __cplusplus
 #define LOCALE extern "C"
+#else
+#define LOCALE extern
+#endif
 #endif
 
    LOCALE void                           FieldConversion(void *,struct lhsParseNode *,struct lhsParseNode *);

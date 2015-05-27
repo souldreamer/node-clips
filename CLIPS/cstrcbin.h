@@ -41,7 +41,11 @@ struct bsaveConstructHeader
 #ifdef _CSTRCBIN_SOURCE_
 #define LOCALE
 #else
+#ifdef __cplusplus
 #define LOCALE extern "C"
+#else
+#define LOCALE extern
+#endif
 #endif
 
 #if BLOAD_AND_BSAVE

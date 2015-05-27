@@ -32,7 +32,11 @@
 #ifdef _FACTCOM_SOURCE_
 #define LOCALE
 #else
+#ifdef __cplusplus
 #define LOCALE extern "C"
+#else
+#define LOCALE extern
+#endif
 #endif
 
 #define Facts(a,b,c,d,e) EnvFacts(GetCurrentEnvironment(),a,b,c,d,e)

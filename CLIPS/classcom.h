@@ -61,7 +61,11 @@
 #ifdef _CLASSCOM_SOURCE_
 #define LOCALE
 #else
+#ifdef __cplusplus
 #define LOCALE extern "C"
+#else
+#define LOCALE extern
+#endif
 #endif
 
 #define DefclassModule(x) GetConstructModuleName((struct constructHeader *) x)

@@ -80,7 +80,11 @@ struct factQueryData
 #ifdef _FACTQURY_SOURCE_
 #define LOCALE
 #else
+#ifdef __cplusplus
 #define LOCALE extern "C"
+#else
+#define LOCALE extern
+#endif
 #endif
 
 #define QUERY_DELIMETER_STRING     "(QDS)"

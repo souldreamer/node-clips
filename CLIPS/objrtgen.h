@@ -40,7 +40,11 @@
 #ifdef _OBJRTGEN_SOURCE_
 #define LOCALE
 #else
+#ifdef __cplusplus
 #define LOCALE extern "C"
+#else
+#define LOCALE extern
+#endif
 #endif
 
    LOCALE void             ReplaceGetJNObjectValue(void *,EXPRESSION *,struct lhsParseNode *,int);

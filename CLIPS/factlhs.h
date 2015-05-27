@@ -36,7 +36,11 @@
 #ifdef _FACTLHS_SOURCE_
 #define LOCALE
 #else
+#ifdef __cplusplus
 #define LOCALE extern "C"
+#else
+#define LOCALE extern
+#endif
 #endif
 
    LOCALE int                            FactPatternParserFind(SYMBOL_HN *);

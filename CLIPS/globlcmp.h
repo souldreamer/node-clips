@@ -29,7 +29,11 @@
 #ifdef _GLOBLCMP_SOURCE_
 #define LOCALE
 #else
+#ifdef __cplusplus
 #define LOCALE extern "C"
+#else
+#define LOCALE extern
+#endif
 #endif
 
    LOCALE void                           DefglobalCompilerSetup(void *);

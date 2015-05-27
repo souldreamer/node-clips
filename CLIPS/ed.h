@@ -241,7 +241,11 @@ typedef struct  {
 #ifdef _EDBASIC_SOURCE_
 #define LOCALE
 #else
+#ifdef __cplusplus
 #define LOCALE extern "C"
+#else
+#define LOCALE extern
+#endif
 #endif
 
 LOCALE int gotobol(void *,int,int);
@@ -299,7 +303,11 @@ LOCALE int parse_esc_seq(void);
 #ifdef _EDMAIN_SOURCE_
 #define LOCALE
 #else
+#ifdef __cplusplus
 #define LOCALE extern "C"
+#else
+#define LOCALE extern
+#endif
 #endif
 
 LOCALE VOID edinit(void *,char []);
@@ -347,7 +355,11 @@ extern BUFFER *CompileBufferp;
 #ifdef _EDMISC_SOURCE_
 #define LOCALE
 #else
+#ifdef __cplusplus
 #define LOCALE extern "C"
+#else
+#define LOCALE extern
+#endif
 #endif
 
 LOCALE int compile_region(void *,int,int);
@@ -403,7 +415,11 @@ LOCALE int sys(char *);
 #ifdef _EDSTRUCT_SOURCE_
 #define LOCALE
 #else
+#ifdef __cplusplus
 #define LOCALE extern "C"
+#else
+#define LOCALE extern
+#endif
 #endif
 
 LOCALE int usebuffer(void *,int,int);

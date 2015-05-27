@@ -84,7 +84,11 @@ struct externalFunctionData
 #ifdef _EXTNFUNC_SOURCE_
 #define LOCALE
 #else
+#ifdef __cplusplus
 #define LOCALE extern "C"
+#else
+#define LOCALE extern
+#endif
 #endif
 
 #ifdef LOCALE

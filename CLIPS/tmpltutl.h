@@ -53,7 +53,11 @@
 #ifdef _TMPLTUTL_SOURCE_
 #define LOCALE
 #else
+#ifdef __cplusplus
 #define LOCALE extern "C"
+#else
+#define LOCALE extern
+#endif
 #endif
 
    LOCALE void                           InvalidDeftemplateSlotMessage(void *,char *,char *,int);

@@ -196,7 +196,11 @@ struct defmoduleData
 #ifdef _MODULDEF_SOURCE_
 #define LOCALE
 #else
+#ifdef __cplusplus
 #define LOCALE extern "C"
+#else
+#define LOCALE extern
+#endif
 #endif
 
 #define FindDefmodule(a) EnvFindDefmodule(GetCurrentEnvironment(),a)

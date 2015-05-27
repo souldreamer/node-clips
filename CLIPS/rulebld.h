@@ -42,7 +42,11 @@
 #ifdef _RULEBLD_SOURCE_
 #define LOCALE
 #else
+#ifdef __cplusplus
 #define LOCALE extern "C"
+#else
+#define LOCALE extern
+#endif
 #endif
 
    LOCALE struct joinNode               *ConstructJoins(void *,int,struct lhsParseNode *,int);

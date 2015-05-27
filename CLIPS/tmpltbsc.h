@@ -40,7 +40,11 @@
 #ifdef _TMPLTBSC_SOURCE_
 #define LOCALE
 #else
+#ifdef __cplusplus
 #define LOCALE extern "C"
+#else
+#define LOCALE extern
+#endif
 #endif
 
 #define GetDeftemplateList(a,b) EnvGetDeftemplateList(GetCurrentEnvironment(),a,b)

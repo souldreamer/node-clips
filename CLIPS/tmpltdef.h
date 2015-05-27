@@ -121,7 +121,11 @@ struct deftemplateData
 #ifdef _TMPLTDEF_SOURCE_
 #define LOCALE
 #else
+#ifdef __cplusplus
 #define LOCALE extern "C"
+#else
+#define LOCALE extern
+#endif
 #endif
 
 #define FindDeftemplate(a) EnvFindDeftemplate(GetCurrentEnvironment(),a)
