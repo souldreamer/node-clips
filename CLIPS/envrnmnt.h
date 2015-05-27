@@ -42,7 +42,7 @@
 #ifdef _ENVRNMNT_SOURCE_
 #define LOCALE
 #else
-#define LOCALE extern
+#define LOCALE extern "C"
 #endif
 
 #define USER_ENVIRONMENT_DATA 70

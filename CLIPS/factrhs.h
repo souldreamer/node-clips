@@ -41,7 +41,7 @@
 #ifdef _FACTRHS_SOURCE_
 #define LOCALE
 #else
-#define LOCALE extern
+#define LOCALE extern "C"
 #endif
 
    LOCALE struct expr                   *BuildRHSAssert(void *,char *,struct token *,int *,int,int,char *);

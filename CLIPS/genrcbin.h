@@ -50,7 +50,7 @@ struct defgenericBinaryData
 #ifdef _GENRCBIN_SOURCE_
 #define LOCALE
 #else
-#define LOCALE extern
+#define LOCALE extern "C"
 #endif
 
 LOCALE void SetupGenericsBload(void *);

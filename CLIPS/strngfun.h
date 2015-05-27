@@ -33,7 +33,7 @@
 #ifdef _STRNGFUN_SOURCE_
 #define LOCALE
 #else
-#define LOCALE extern
+#define LOCALE extern "C"
 #endif
 
 #if ALLOW_ENVIRONMENT_GLOBALS

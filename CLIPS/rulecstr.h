@@ -31,7 +31,7 @@
 #ifdef _RULECSTR_SOURCE_
 #define LOCALE
 #else
-#define LOCALE extern
+#define LOCALE extern "C"
 #endif
 
    LOCALE struct lhsParseNode           *GetExpressionVarConstraints(void *,struct lhsParseNode *);

@@ -36,7 +36,7 @@
 #ifdef _PRCDRPSR_SOURCE
 #define LOCALE
 #else
-#define LOCALE extern
+#define LOCALE extern "C"
 #endif
 
 struct BindInfo

@@ -91,7 +91,7 @@ struct defglobalModule
 #ifdef _GLOBLDEF_SOURCE_
 #define LOCALE
 #else
-#define LOCALE extern
+#define LOCALE extern "C"
 #endif
 
 #define DefglobalModule(x) GetConstructModuleName((struct constructHeader *) x)

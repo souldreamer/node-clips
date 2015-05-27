@@ -41,7 +41,7 @@ struct memoryPtr;
 #ifdef _MEMORY_SOURCE_
 #define LOCALE
 #else
-#define LOCALE extern
+#define LOCALE extern "C"
 #endif
 
 struct chunkInfo

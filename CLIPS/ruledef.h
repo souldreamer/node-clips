@@ -149,7 +149,7 @@ struct defruleData
 #ifdef _RULEDEF_SOURCE_
 #define LOCALE
 #else
-#define LOCALE extern
+#define LOCALE extern "C"
 #endif
 
 #define DefruleModule(x) GetConstructModuleName((struct constructHeader *) x)

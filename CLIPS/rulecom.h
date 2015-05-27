@@ -45,7 +45,7 @@
 #ifdef _RULECOM_SOURCE_
 #define LOCALE
 #else
-#define LOCALE extern
+#define LOCALE extern "C"
 #endif
 
 #define Matches(a) EnvMatches(GetCurrentEnvironment(),a)

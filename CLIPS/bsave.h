@@ -42,7 +42,7 @@ struct BinaryItem;
 #ifdef _BSAVE_SOURCE_
 #define LOCALE
 #else
-#define LOCALE extern
+#define LOCALE extern "C"
 #endif
 
 struct BinaryItem

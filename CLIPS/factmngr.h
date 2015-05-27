@@ -100,7 +100,7 @@ struct factsData
 #ifdef _FACTMNGR_SOURCE_
 #define LOCALE
 #else
-#define LOCALE extern
+#define LOCALE extern "C"
 #endif
 
 #define Assert(a) EnvAssert(GetCurrentEnvironment(),a)

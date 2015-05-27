@@ -35,7 +35,7 @@
 #ifdef _FACTRETE_SOURCE_
 #define LOCALE
 #else
-#define LOCALE extern
+#define LOCALE extern "C"
 #endif
 
    LOCALE intBool                        FactPNGetVar1(void *,void *,DATA_OBJECT_PTR);

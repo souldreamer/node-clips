@@ -46,7 +46,7 @@ typedef struct messageHandlerLink
 #ifdef _MSGPASS_SOURCE_
 #define LOCALE
 #else
-#define LOCALE extern
+#define LOCALE extern "C"
 #endif
 
 #define Send(a,b,c,d) EnvSend(GetCurrentEnvironment(),a,b,c,d)

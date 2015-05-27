@@ -201,7 +201,7 @@ struct objectReteData
 #ifdef _OBJRTFNX_SOURCE_
 #define LOCALE
 #else
-#define LOCALE extern
+#define LOCALE extern "C"
 #endif
 
 LOCALE void InstallObjectPrimitives(void *);

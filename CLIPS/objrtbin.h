@@ -46,7 +46,7 @@ struct objectReteBinaryData
 #ifdef _OBJRTBIN_SOURCE_
 #define LOCALE
 #else
-#define LOCALE extern
+#define LOCALE extern "C"
 #endif
 
 LOCALE void SetupObjectPatternsBload(void *);

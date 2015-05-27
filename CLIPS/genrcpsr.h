@@ -34,7 +34,7 @@
 #ifdef _GENRCPSR_SOURCE_
 #define LOCALE
 #else
-#define LOCALE extern
+#define LOCALE extern "C"
 #endif
 
 LOCALE intBool ParseDefgeneric(void *,char *);

@@ -36,7 +36,7 @@
 #ifdef _GLOBLBSC_SOURCE_
 #define LOCALE
 #else
-#define LOCALE extern
+#define LOCALE extern "C"
 #endif
 
 #define GetDefglobalList(a,b) EnvGetDefglobalList(GetCurrentEnvironment(),a,b)

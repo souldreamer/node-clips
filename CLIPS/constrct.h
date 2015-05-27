@@ -104,7 +104,7 @@ struct constructData
 #ifdef _CONSTRCT_SOURCE_
 #define LOCALE
 #else
-#define LOCALE extern
+#define LOCALE extern "C"
 #endif
 
 #define RemoveClearFunction(a) EnvRemoveClearFunction(GetCurrentEnvironment(),a)

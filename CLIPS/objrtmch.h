@@ -116,7 +116,7 @@ typedef struct objectMatchAction
 #ifdef _OBJRTMCH_SOURCE_
 #define LOCALE
 #else
-#define LOCALE extern
+#define LOCALE extern "C"
 #endif
 
    LOCALE void                  ObjectMatchDelay(void *,DATA_OBJECT *);

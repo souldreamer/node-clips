@@ -46,7 +46,7 @@
 #ifdef _ARGACCES_SOURCE_
 #define LOCALE
 #else
-#define LOCALE extern
+#define LOCALE extern "C"
 #endif
 
 #define RtnArgCount() EnvRtnArgCount(GetCurrentEnvironment())

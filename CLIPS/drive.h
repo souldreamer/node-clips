@@ -45,7 +45,7 @@
 #ifdef _DRIVE_SOURCE_
 #define LOCALE
 #else
-#define LOCALE extern
+#define LOCALE extern "C"
 #endif
 
    void                           NetworkAssert(void *,struct partialMatch *,struct joinNode *);

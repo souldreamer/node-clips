@@ -45,7 +45,7 @@ struct portConstructItem
 #ifdef _MODULPSR_SOURCE_
 #define LOCALE
 #else
-#define LOCALE extern
+#define LOCALE extern "C"
 #endif
 
    LOCALE long                           GetNumberOfDefmodules(void *);

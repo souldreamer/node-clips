@@ -57,7 +57,7 @@ struct printUtilityData
 #ifdef _PRNTUTIL_SOURCE_
 #define LOCALE
 #else
-#define LOCALE extern
+#define LOCALE extern "C"
 #endif
    LOCALE void                           InitializePrintUtilityData(void *);
    LOCALE void                           PrintInChunks(void *,char *,char *);

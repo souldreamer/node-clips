@@ -39,7 +39,7 @@
 #ifdef _DFFCTBSC_SOURCE_
 #define LOCALE
 #else
-#define LOCALE extern
+#define LOCALE extern "C"
 #endif
 
 #define GetDeffactsList(a,b) EnvGetDeffactsList(GetCurrentEnvironment(),a,b)

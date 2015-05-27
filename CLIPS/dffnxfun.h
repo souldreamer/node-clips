@@ -62,7 +62,7 @@ typedef struct deffunctionModule DEFFUNCTION_MODULE;
 #ifdef _DFFNXFUN_SOURCE_
 #define LOCALE
 #else
-#define LOCALE extern
+#define LOCALE extern "C"
 #endif
 
 struct deffunctionModule

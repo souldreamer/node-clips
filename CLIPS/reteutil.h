@@ -44,7 +44,7 @@
 #ifdef _RETEUTIL_SOURCE_
 #define LOCALE
 #else
-#define LOCALE extern
+#define LOCALE extern "C"
 #endif
 
    LOCALE void                           PrintPartialMatch(void *,char *,struct partialMatch *);

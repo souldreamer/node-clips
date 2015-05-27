@@ -40,7 +40,7 @@
 #ifdef _CSTRNCHK_SOURCE_
 #define LOCALE
 #else
-#define LOCALE extern
+#define LOCALE extern "C"
 #endif
 
 #define NO_VIOLATION                    0

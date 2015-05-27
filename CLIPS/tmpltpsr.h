@@ -36,7 +36,7 @@
 #ifdef _TMPLTPSR_SOURCE_
 #define LOCALE
 #else
-#define LOCALE extern
+#define LOCALE extern "C"
 #endif
 
    LOCALE int                            ParseDeftemplate(void *,char *);

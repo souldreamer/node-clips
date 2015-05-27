@@ -36,7 +36,7 @@
 #ifdef _FACTFUN_SOURCE_
 #define LOCALE
 #else
-#define LOCALE extern
+#define LOCALE extern "C"
 #endif
 
 #define FactDeftemplate(a) EnvFactDeftemplate(GetCurrentEnvironment(),a)

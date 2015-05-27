@@ -29,7 +29,7 @@
 #ifdef _FACTPRT_SOURCE_
 #define LOCALE
 #else
-#define LOCALE extern
+#define LOCALE extern "C"
 #endif
 
    LOCALE void                           PrintFactJNCompVars1(void *,char *,void *);

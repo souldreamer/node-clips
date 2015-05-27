@@ -61,7 +61,7 @@ struct objectBinaryData
 #ifdef _OBJBIN_SOURCE_
 #define LOCALE
 #else
-#define LOCALE extern
+#define LOCALE extern "C"
 #endif
 
 LOCALE void SetupObjectsBload(void *);

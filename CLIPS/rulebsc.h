@@ -40,7 +40,7 @@
 #ifdef _RULEBSC_SOURCE_
 #define LOCALE
 #else
-#define LOCALE extern
+#define LOCALE extern "C"
 #endif
 
 #define GetDefruleList(a,b) EnvGetDefruleList(GetCurrentEnvironment(),a,b)

@@ -31,7 +31,7 @@
 #ifdef _RULEDLT_SOURCE_
 #define LOCALE
 #else
-#define LOCALE extern
+#define LOCALE extern "C"
 #endif
 
    LOCALE void                           ReturnDefrule(void *,void *);

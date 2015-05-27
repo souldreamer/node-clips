@@ -79,7 +79,7 @@ struct instanceQueryData
 #ifdef _INSQUERY_SOURCE_
 #define LOCALE
 #else
-#define LOCALE extern
+#define LOCALE extern "C"
 #endif
 
 #define QUERY_DELIMETER_STRING     "(QDS)"

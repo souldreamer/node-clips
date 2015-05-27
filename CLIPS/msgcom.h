@@ -61,7 +61,7 @@ struct messageHandlerData
 #ifdef _MSGCOM_SOURCE_
 #define LOCALE
 #else
-#define LOCALE extern
+#define LOCALE extern "C"
 #endif
 
 #define INIT_STRING   "init"

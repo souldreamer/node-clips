@@ -44,7 +44,7 @@ struct factHashEntry
 #ifdef _FACTHSH_SOURCE_
 #define LOCALE
 #else
-#define LOCALE extern
+#define LOCALE extern "C"
 #endif
 
 #define GetFactDuplication() EnvGetFactDuplication(GetCurrentEnvironment())

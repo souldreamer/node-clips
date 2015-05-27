@@ -58,7 +58,7 @@ struct instanceFileData
 #ifdef _INSFILE_SOURCE_
 #define LOCALE
 #else
-#define LOCALE extern
+#define LOCALE extern "C"
 #endif
 
 #define BinaryLoadInstances(a) EnvBinaryLoadInstances(GetCurrentEnvironment(),a)

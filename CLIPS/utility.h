@@ -77,7 +77,7 @@ struct utilityData
 #ifdef _UTILITY_SOURCE_
 #define LOCALE
 #else
-#define LOCALE extern
+#define LOCALE extern "C"
 #endif
 
 #define DecrementGCLocks() EnvDecrementGCLocks(GetCurrentEnvironment())

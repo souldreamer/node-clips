@@ -40,7 +40,7 @@
 #ifdef _SYMBLCMP_SOURCE_
 #define LOCALE
 #else
-#define LOCALE extern
+#define LOCALE extern "C"
 #endif
 
    LOCALE void                     PrintSymbolReference(void *,FILE *,SYMBOL_HN *);

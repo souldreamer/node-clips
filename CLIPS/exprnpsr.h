@@ -49,7 +49,7 @@ typedef struct saved_contexts
 #ifdef _EXPRNPSR_SOURCE_
 #define LOCALE
 #else
-#define LOCALE extern
+#define LOCALE extern "C"
 #endif
 
 #define GetSequenceOperatorRecognition() EnvGetSequenceOperatorRecognition(GetCurrentEnvironment())

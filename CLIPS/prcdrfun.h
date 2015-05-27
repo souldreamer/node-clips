@@ -36,7 +36,7 @@
 #ifdef _PRCDRFUN_SOURCE
 #define LOCALE
 #else
-#define LOCALE extern
+#define LOCALE extern "C"
 #endif
 
 typedef struct loopCounterStack

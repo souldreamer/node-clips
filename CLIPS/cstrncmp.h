@@ -36,7 +36,7 @@
 #ifdef _CSTRNCMP_SOURCE_
 #define LOCALE
 #else
-#define LOCALE extern
+#define LOCALE extern "C"
 #endif
 
 #ifndef _STDIO_INCLUDED_

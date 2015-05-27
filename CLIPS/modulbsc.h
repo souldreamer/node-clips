@@ -35,7 +35,7 @@
 #ifdef _MODULBSC_SOURCE_
 #define LOCALE
 #else
-#define LOCALE extern
+#define LOCALE extern "C"
 #endif
 
 #define GetDefmoduleList(a) EnvGetDefmoduleList(GetCurrentEnvironment(),a)

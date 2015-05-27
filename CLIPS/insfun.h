@@ -63,7 +63,7 @@ typedef struct igarbage
 #ifdef _INSFUN_SOURCE_
 #define LOCALE
 #else
-#define LOCALE extern
+#define LOCALE extern "C"
 #endif
 
 #define DecrementInstanceCount(a) EnvDecrementInstanceCount(GetCurrentEnvironment(),a)

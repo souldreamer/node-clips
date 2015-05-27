@@ -39,7 +39,7 @@
 #ifdef _FACTMCH_SOURCE_
 #define LOCALE
 #else
-#define LOCALE extern
+#define LOCALE extern "C"
 #endif
 
    LOCALE void                           FactPatternMatch(void *,struct fact *,

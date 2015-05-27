@@ -60,7 +60,7 @@ struct instanceData
 #ifdef _INSCOM_SOURCE_
 #define LOCALE
 #else
-#define LOCALE extern
+#define LOCALE extern "C"
 #endif
 
 #define CreateRawInstance(a,b) EnvCreateRawInstance(GetCurrentEnvironment(),a,b)

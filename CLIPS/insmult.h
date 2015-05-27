@@ -34,7 +34,7 @@
 #ifdef _INSMULT_SOURCE_
 #define LOCALE
 #else
-#define LOCALE extern
+#define LOCALE extern "C"
 #endif
 
 #if (! RUN_TIME)

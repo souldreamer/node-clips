@@ -87,7 +87,7 @@ struct definstancesData
 #ifdef _DEFINS_SOURCE_
 #define LOCALE
 #else
-#define LOCALE extern
+#define LOCALE extern "C"
 #endif
 
 #define DefinstancesModule(x) GetConstructModuleName((struct constructHeader *) x)

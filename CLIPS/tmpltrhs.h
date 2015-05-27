@@ -39,7 +39,7 @@
 #ifdef _TMPLTRHS_SOURCE_
 #define LOCALE
 #else
-#define LOCALE extern
+#define LOCALE extern "C"
 #endif
 
    LOCALE struct expr                   *ParseAssertTemplate(void *,char *,struct token *,int *,

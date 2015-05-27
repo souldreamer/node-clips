@@ -37,7 +37,7 @@
 #ifdef _INCRRSET_SOURCE_
 #define LOCALE
 #else
-#define LOCALE extern
+#define LOCALE extern "C"
 #endif
 
 #define GetIncrementalReset() EnvGetIncrementalReset(GetCurrentEnvironment())
