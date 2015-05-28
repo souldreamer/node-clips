@@ -425,12 +425,7 @@ Handle<Value> DataObjectToJSON(DATA_OBJECT& obj) {
   } else if (type == SYMBOL) {
     return String::New(ValueToString(value));
   } else if (type == STRING) {
-    char *str = ValueToString(value);
-    char *ostr = (char *)malloc(sizeof(char) * (strlen(str) + 2));
-    sprintf(ostr,"'%s'", str);
-    Handle<Value> result = String::New(ostr);
-    free(ostr);
-    return result;
+    return String::New(ValueToString(value));
   } else if (type == FLOAT) {
     return Number::New(ValueToDouble(value));
   } else if (type == INTEGER) {

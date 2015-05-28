@@ -1,6 +1,6 @@
 {
   "name": "node-clips",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "NodeJS package for using CLIPS, a tool for building expert systems.",
   "keywords": [
     "clips",
