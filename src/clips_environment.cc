@@ -400,8 +400,8 @@ Handle<Value> MultiFieldToJSON(void* multifield_ptr, long begin, long end) {
       array->Set(index-1, String::New(ValueToString(GetMFValue(multifield_ptr, index))));
     } else if (field_type == STRING) {
       char *str = ValueToString(GetMFValue(multifield_ptr, index));
-      char *ostr = (char *)malloc(sizeof(char) * (strlen(str) + 2));
-      sprintf(ostr,"'%s'", str);
+      char *ostr = (char *)malloc(sizeof(char) * (strlen(str)));
+      sprintf(ostr,"%s", str);
       array->Set(index-1, String::New(ostr));
       free(ostr);
     } else if (field_type == FLOAT) {
@@ -425,7 +425,12 @@ Handle<Value> DataObjectToJSON(DATA_OBJECT& obj) {
   } else if (type == SYMBOL) {
     return String::New(ValueToString(value));
   } else if (type == STRING) {
-    return String::New(ValueToString(value));
+    char *str = ValueToString(value);
+    char *ostr = (char *)malloc(sizeof(char) * (strlen(str)));
+    sprintf(ostr,"%s", str);
+    Handle<Value> res = String::New(ValueToString(ostr));
+    free(ostr);
+    return res;
   } else if (type == FLOAT) {
     return Number::New(ValueToDouble(value));
   } else if (type == INTEGER) {
